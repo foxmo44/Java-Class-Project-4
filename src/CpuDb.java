@@ -10,6 +10,8 @@
 // cpuname
 // performance
 // price
+//
+// The class provides functions to add a cpu list, retrieve a cpu list, and to clear the database
 
 import java.sql.*;
 
