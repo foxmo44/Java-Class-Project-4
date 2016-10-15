@@ -11,7 +11,7 @@ public class CpuComparator implements Comparator< CPU >
      * Compare function to return which cpu has better performance
      * @param c1 - first cpu object
      * @param c2 - second cpu object
-     * @return
+     * @return indicate the value that tells the result of the compare
      */
     public int compare(CPU c1, CPU c2 )
     {

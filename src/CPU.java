@@ -47,6 +47,7 @@ public class CPU
 
     /**
      * @param m_strCPULine - the input file line to be parsed
+     * @return Indicate if the ParseCPULin succeeded or not
      */
     private boolean ParseCPULine(String m_strCPULine)
     {
