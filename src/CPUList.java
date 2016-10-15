@@ -30,6 +30,14 @@ public class CPUList
     }
 
     /**
+     * @param tempCPU - A CPU object to add to the list
+     */
+    public void AddCpu(CPU tempCPU)
+    {
+        theList.add(tempCPU);
+    }
+
+    /**
      * @return the combined string showing the CPU list
      */
     public String toString()
@@ -70,7 +78,7 @@ public class CPUList
      */
     public void ShowReport()
     {
-
+        System.out.print(this);
     }
 
     /**

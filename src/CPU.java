@@ -31,6 +31,21 @@ public class CPU
     }
 
     /**
+     * Constructor to be used when the fields are already known
+     * @param strCPUName - name of the CPU
+     * @param iPerformance - performance factor of the CPU
+     * @param dPrice - price of the CPU
+     */
+    public CPU(String strCPUName, int iPerformance, double dPrice)
+    {
+        m_strCPUName = strCPUName;
+        m_dPerformance = (double)iPerformance;
+        m_dPrice = dPrice;
+        m_dValue = m_dPerformance / m_dPrice; //Performance / Price
+        m_bValid = true;
+    }
+
+    /**
      * @param m_strCPULine - the input file line to be parsed
      */
     private boolean ParseCPULine(String m_strCPULine)

@@ -132,9 +132,9 @@ public class CpuDb
      */
     public boolean GetCpuList(CPUList lstCpu)
     {
-        boolean retValue = false;
-        Statement s = null;
-        ResultSet r = null;
+        boolean         retValue = false;
+        Statement       s = null;
+        ResultSet       r = null;
 
         try
         {
@@ -147,34 +147,40 @@ public class CpuDb
             //Get the results set for the query
             ResultSetMetaData m = r.getMetaData();
 
-            //How many columns do we have
-            int col = m.getColumnCount();
-
-            //Show all of the data in the results set
+            //Iterate through the record set and add to the CPU list
             while( r.next() ){
-                for( int i = 1; i <= col; i++ ){
-                    int t = m.getColumnType( i );
-                    switch( t ){
-                        case Types.INTEGER:
-                            System.out.print( r.getInt( i ) );
-                            break;
-                        case Types.VARCHAR:
-                            System.out.print( r.getString( i ) );
-                            break;
-                        case Types.DATE:
-                            System.out.print( r.getDate( i ) );
-                            break;
-                        case Types.FLOAT:
-                            System.out.print( r.getFloat( i ) );
-                            break;
-                        default:
-                            System.out.print("Unk("+ r.getType() + ")");
-                            break;
-                    }
-                    System.out.print( ";" );
-                }
-                System.out.println();
+                lstCpu.AddCpu(new CPU(r.getString( "cpuname" ),r.getInt( "performance" ),r.getFloat( "price" )));
             }
+
+
+//            //How many columns do we have
+//            int col = m.getColumnCount();
+//
+//            //Show all of the data in the results set
+//            while( r.next() ){
+//                for( int i = 1; i <= col; i++ ){
+//                    int t = m.getColumnType( i );
+//                    switch( t ){
+//                        case Types.INTEGER:
+//                            System.out.print( r.getInt( i ) );
+//                            break;
+//                        case Types.VARCHAR:
+//                            System.out.print( r.getString( i ) );
+//                            break;
+//                        case Types.DATE:
+//                            System.out.print( r.getDate( i ) );
+//                            break;
+//                        case Types.FLOAT:
+//                            System.out.print( r.getFloat( i ) );
+//                            break;
+//                        default:
+//                            System.out.print("Unk("+ r.getType() + ")");
+//                            break;
+//                    }
+//                    System.out.print( ";" );
+//                }
+//                System.out.println();
+//            }
 
             retValue = true;
         }
