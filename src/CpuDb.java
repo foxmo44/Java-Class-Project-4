@@ -107,14 +107,30 @@ public class CpuDb
     {
         boolean retValue = false;
         Statement s = null;
+        String  strSql;
         ResultSet r = null;
 
         try
         {
             s = c.createStatement();
 
-            // Create
-            s.execute("insert into cputable( cpuname, performance, price) values( 'CPU1', 123, 55.66)");
+            //"insert into cputable( cpuname, performance, price) values( 'CPU1', 123, 55.66)"
+            for(CPU objCPU : lstCpu.theList)
+            {
+                //Only insert if valid
+                if(objCPU.getValid() == true)
+                {
+                    //Create the CPU
+                    strSql = "insert into cputable( cpuname, performance, price) values('"
+                            + objCPU.getCpuName() + "',"
+                            + objCPU.getPerformance() + ","
+                            + objCPU.getPrice() + ")";
+
+                    //System.out.println(strSql);
+                    s.execute(strSql);
+                }
+            }
+
         }
         catch ( SQLException e)
         {
@@ -198,7 +214,24 @@ public class CpuDb
      */
     public boolean Clear()
     {
-        boolean retValue = false;
+        boolean     retValue = false;
+        Statement   s = null;
+        ResultSet   r = null;
+
+        try
+        {
+            //Get the statement object connected to the database
+            s = c.createStatement();
+
+            //Get all of the fields from the cpu table
+            s.execute("delete from cputable");
+
+        }
+        catch ( SQLException e)
+        {
+            e.printStackTrace();
+        }
+
         return (retValue);
     }
 }

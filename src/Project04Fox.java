@@ -30,6 +30,9 @@ public class Project04Fox
                     .flatMap(Arrays::stream) // Stream<String>
                     .forEach(line -> cpuList.AddCpu(line));
 
+            //Clear the list table for the new listing
+            cpuDb.Clear();
+
             //Insert the Cpu List into the database
             cpuDb.SetCpuList(cpuList);
 
