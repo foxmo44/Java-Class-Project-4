@@ -78,7 +78,10 @@ public class CPUList
      */
     public void ShowReport()
     {
-        System.out.print(this);
+        for(CPU objCpu : theList)
+        {
+            System.out.printf("%s: %5.2f\n", objCpu.getCpuName(), objCpu.getPrice());
+        }
     }
 
     /**

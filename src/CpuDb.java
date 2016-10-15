@@ -32,11 +32,6 @@ public class CpuDb
     public CpuDb()
     {
         bConnected = Connect("cpudb", "tcc2016", "tcc2016");
-
-        if(bConnected == true)
-        {
-            ShowColumns("cputable");
-        }
     }
 
     /**
@@ -158,7 +153,7 @@ public class CpuDb
             s = c.createStatement();
 
             //Get all of the fields from the cpu table
-            r = s.executeQuery("SELECT * from cputable");
+            r = s.executeQuery("SELECT * from cputable order by price DESC");
 
             //Get the results set for the query
             ResultSetMetaData m = r.getMetaData();
