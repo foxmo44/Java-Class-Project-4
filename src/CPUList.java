@@ -1,14 +1,18 @@
-// Author: Michael Fox
-// Session: Advanced Java
-// Project: Project 4
-// Current Date: 10/3/2016
-// DateDue: 2016.10.12
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-
+/**
+ * <h1>Advanced Java - Project 4</h1>
+ * <h1>CPUList Class</h1>
+ * This is the class that stores the CPU objects for each of the input lines from the
+ * input csv file.  It also will write out the report of that list.
+ * <p>
+ *
+ * @author   Michael Fox
+ * @version  Project 04
+ * @since   2016.10.16
+ */
 public class CPUList
 {
     ArrayList<CPU> theList = new ArrayList<>();

@@ -1,5 +1,7 @@
+import java.sql.*;
 /**
- * <h1>Advanced Java - CpuDb Class</h1>
+ * <h1>Advanced Java - Project 4</h1>
+ * <h1>CpuDb Class</h1>
  * This class works with the database table with the following columns.
  * The class provides functions to add a cpu list, retrieve a cpu list, and to clear the database
  * <p>
@@ -9,10 +11,6 @@
  * @version  Project 04
  * @since   2016.10.16
  */
-
-
-import java.sql.*;
-
 public class CpuDb
 {
 

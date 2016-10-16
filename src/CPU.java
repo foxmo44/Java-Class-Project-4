@@ -1,15 +1,14 @@
-// Author: Michael Fox
-// Session: Advanced Java
-// Project: Project 4
-// Current Date: 10/3/2016
-// DateDue: 2016.10.12
-
-//Regular expression input
-// ",(?=([^\"]*\"[^\"]*\")*[^\"]*$)" will pick out the commas only
-
-
-
-//Class to store the information about the CPU
+/**
+ * <h1>Advanced Java - Project 4</h1>
+ * <h1>CPU Class</h1>
+ * This class used to store the particulars of the CPU read from each input file line
+ * <p>
+ * <b>Note:</b> Regular expression input: ",(?=([^\"]*\"[^\"]*\")*[^\"]*$)" will pick out the commas only
+ *
+ * @author   Michael Fox
+ * @version  Project 04
+ * @since   2016.10.16
+ */
 public class CPU
 {
     private boolean m_bValid;

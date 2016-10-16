@@ -1,10 +1,14 @@
-// Author: Michael Fox
-// Session: Advanced Java
-// Project: Project 4
-// Current Date: 10/5/2016
-// DateDue: 2016.10.12
 import java.util.Comparator;
-
+/**
+ * <h1>Advanced Java - Project 4</h1>
+ * <h1>CpuComparator Class</h1>
+ * This class provide a function used to compare the CPU objects
+ * <p>
+ *
+ * @author   Michael Fox
+ * @version  Project 04
+ * @since   2016.10.16
+ */
 public class CpuComparator implements Comparator< CPU >
 {
     /**

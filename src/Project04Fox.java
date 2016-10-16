@@ -1,14 +1,20 @@
-// Author: Michael Fox
-// Session: Advanced Java
-// Project: Project 4
-// Current Date: 9/25/2016
-// DateDue: 2016.10.12
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
-
+/**
+ * <h1>Advanced Java - Project 4</h1>
+ * <h1>Project04Fox Class</h1>
+ * This the runable class that calls a stream and lambda function to fill the CPUList.
+ * The CPUDb class encapsulates the database interface for mysql.  It will take the CPUList
+ * objects and populate a table of CPUs that ahs the name, performance and price.
+ * <p>
+ * <b>Note:</b> The fields are: id, cpuname, performance, and price
+ *
+ * @author   Michael Fox
+ * @version  Project 04
+ * @since   2016.10.16
+ */
 public class Project04Fox
 {
     /**
